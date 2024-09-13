@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clesaa Electronics</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- include the navbar -->
+    {% include 'navbar.html' %} 
+    <h5 class="text-dark text-center">{{message1}}</h5>
+    <h5 class="text-dark text-center">{{message2}}</h5><br>
+    <section class="row bg-secondary p_4" ><br> <br>
+        <div class="col-md-6"> <br>
+            <!-- upload form -->
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="text" name="product_name" id="product_name" placeholder="Enter Products Name" class="form-control"><br>
+
+                <textarea name="product_desc" id="product_desc" placeholder="Enter Products Description" class="form-control" rows="5"></textarea><br>
+
+                <input type="number" name="product_cost" class="form-control" placeholder="Enter Product cost"><br>
+                
+
+                <select name="product_category" id="product_category" class="form-control">
+                    <option value="satelite">satelite</option>
+                    <option value="networking">NETWORKING</option>
+                    <option value="tv_accessories">tv_accessories</option>
+                   
+                    
+                </select><br>
+                <input type="file" name="product_image1" id="product_image1" class="form-control" required><br>
+                <input type="file" name="product_image2" id="product_image2" class="form-control" required><br>
+                
+
+                <button type="submit" class="btn bg-outline-dark text_white">upload Product</button>
+
+            </form>
+
+        </div>
+        <!-- col1 -->
+        <div class="col-md-6">
+            
+            <img src="../static/images/elementary-school-class-with-back-to-school-items.png" alt="" width="100%" height="100%">
+
+        </div>
+    </section>
+    <section class="row bg-dark p-5 text-white text-center mb-4">
+        <div class="col-md-12">
+        <h6>Created by malika ivy &copy; 2024 All Rights Reserved.</h6>
+         
+        
+        <style>
+        .social-icon {
+        font-size: 24px;
+        margin: 10px;
+        color: white;
+        }
+         
+        
+        .social-icon:hover {
+        color: #007bff;
+        }
+        </style>
+         
+        
+        <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+         
+        
+        </div>
+         
+        
+        </section>
+    
+</body>
+</html>
