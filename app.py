@@ -32,8 +32,6 @@ def home():
     # fetch all the entries in the category electronics and put them in a variable
     Satelite=cursor2.fetchall()
 
-
-
     sql3="SELECT * FROM products WHERE product_category ='Tv_Accessories' "
         # create a cursor
     cursor3=connection.cursor()
@@ -41,12 +39,6 @@ def home():
     cursor3.execute(sql3)
     # fetch all the entries in the category electronics and put them in a variable
     Tv_Accessories=cursor3.fetchall()
-
-
-   
-
-   
-
 
     return render_template('home.html',Networking=Networking,Satelite=Satelite,Tv_Accessories=Tv_Accessories)
 
